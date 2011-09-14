@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
+	<application>7776521</application>
+	<version>8</version>
+	
+	<!-- Configure java.util.logging -->
+	<system-properties>
+		<property name="java.util.logging.config.file" value="WEB-INF/logging.properties"/>
+		<property name="fetch.image.url" value="http://www.kitco.cn/cn/live_charts/goldcn.gif" />
+		<property name="fetch.smallimage.url" value="http://www.kitco.cn/cn/live_charts/t24_au_ch_usoz.gif" />
+	</system-properties>
+	
+	<precompilation-enabled>false</precompilation-enabled>
+
+	<resource-files>
+		<include path="/test.txt" />
+		<exclude path="/feeds/**.xml" />
+	</resource-files>
+    
+</appengine-web-app>

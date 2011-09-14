@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cronentries>
+  <!--  cron>
+    <url>/print</url>
+    <description>System print every one hour</description>
+    <schedule>every 1 hours</schedule>
+  </cron>--><!--
+  <cron>
+    <url>/fetch</url>
+    <description>System fetch gold chart from www.zhihuangjin.com every hour</description>
+    <schedule>every 1 hours</schedule>
+  </cron>
+  --><cron>
+    <url>/fetchimage</url>
+    <description>System fetch gold chart from kitco every day 23:55</description>
+    <schedule>every day 23:55</schedule>
+  </cron>
+  <!--<cron>
+    <url>/htmlmail</url>
+    <description>Send price list to users 0:55</description>
+    <schedule>every day 0:55</schedule>
+  </cron>
+  <cron>
+    <url>/hardwaremail</url>
+    <description>Send price list to users 1:00</description>
+    <schedule>every day 1:00</schedule>
+  </cron>-->
+  <!--  cron>
+    <url>/weeklyreport</url>
+    <description>Mail out a weekly report</description>
+    <schedule>every monday 08:30</schedule>
+    <timezone>America/New_York</timezone>
+  </cron>-->
+</cronentries>
