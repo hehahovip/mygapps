@@ -14,7 +14,7 @@ import com.google.appengine.api.datastore.KeyFactory;
 import com.hehaho.googleapp.demo.jdo.util.PMF;
 
 /**
- * @author Kent.Wang
+ * @author Kevin.Wang
  * 
  */
 public class JDOServcie {
@@ -36,7 +36,7 @@ public class JDOServcie {
 		Person p = new Person();
 		p.setId(id);
 		p.setAge(100);
-		p.setName("Kent Wang");
+		p.setName("Kevin Wang");
 		p.setCreateDate(new Date());
 		p.setModifyDate(new Date());
 

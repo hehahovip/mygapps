@@ -4,7 +4,7 @@
 package com.hehaho.googleapp.demo.bean;
 
 /**
- * @author Kent.Wang
+ * @author Kevin.Wang
  *
  */
 public class SiteInfo {

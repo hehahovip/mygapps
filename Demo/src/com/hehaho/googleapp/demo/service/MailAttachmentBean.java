@@ -4,7 +4,7 @@
 package com.hehaho.googleapp.demo.service;
 
 /**
- * @author Kent.Wang
+ * @author Kevin.Wang
  *
  */
 public class MailAttachmentBean {

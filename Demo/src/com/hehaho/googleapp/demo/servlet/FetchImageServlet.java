@@ -26,7 +26,7 @@ import com.hehaho.googleapp.demo.service.MailService;
 import com.hehaho.googleapp.demo.util.BytesUtils;
 
 /**
- * @author Kent.Wang
+ * @author Kevin.Wang
  *
  */
 public class FetchImageServlet extends HttpServlet {

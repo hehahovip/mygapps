@@ -16,7 +16,7 @@ import com.hehaho.googleapp.demo.jdo.Person;
 import com.hehaho.googleapp.demo.jdo.JDOServcie;
 
 /**
- * @author Kent.Wang
+ * @author Kevin.Wang
  *
  */
 public class JDOTestServlet extends HttpServlet {

@@ -29,7 +29,7 @@ import com.hehaho.googleapp.demo.util.BytesUtils;
 import com.hehaho.googleapp.demo.util.Constants;
 
 /**
- * @author Kent.Wang
+ * @author Kevin.Wang
  *
  */
 public class FetchServlet extends HttpServlet {

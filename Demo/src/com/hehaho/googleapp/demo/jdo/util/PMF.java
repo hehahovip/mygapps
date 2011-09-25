@@ -7,7 +7,7 @@ import javax.jdo.JDOHelper;
 import javax.jdo.PersistenceManagerFactory;
 
 /**
- * @author Kent.Wang
+ * @author Kevin.Wang
  *
  */
 public class PMF {

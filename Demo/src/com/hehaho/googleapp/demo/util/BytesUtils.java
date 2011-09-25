@@ -11,7 +11,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * @author Kent.Wang
+ * @author Kevin.Wang
  * 
  */
 public class BytesUtils {

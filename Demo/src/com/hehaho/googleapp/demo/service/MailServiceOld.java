@@ -25,7 +25,7 @@ import javax.mail.internet.MimeMultipart;
 import javax.mail.util.ByteArrayDataSource;
 
 /**
- * @author Kent.Wang
+ * @author Kevin.Wang
  * 
  */
 public class MailServiceOld {

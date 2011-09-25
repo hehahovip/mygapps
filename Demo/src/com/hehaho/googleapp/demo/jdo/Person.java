@@ -12,7 +12,7 @@ import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
 /**
- * @author Kent.Wang
+ * @author Kevin.Wang
  *
  */
 @PersistenceCapable(identityType=IdentityType.APPLICATION)

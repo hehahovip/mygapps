@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.hehaho.googleapp.demo.mail.MailServiceTest;
 
 /**
- * @author Kent.Wang
+ * @author Kevin.Wang
  *
  */
 public class ScheduledTaskTest extends HttpServlet {

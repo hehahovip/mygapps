@@ -16,7 +16,7 @@ import java.util.logging.Logger;
 import com.google.appengine.api.mail.MailServiceFactory;
 
 /**
- * @author Kent.Wang
+ * @author Kevin.Wang
  * 
  */
 public class MailService {

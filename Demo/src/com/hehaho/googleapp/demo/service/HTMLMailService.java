@@ -26,7 +26,7 @@ import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 
 /**
- * @author Kent.Wang
+ * @author Kevin.Wang
  * 
  */
 public class HTMLMailService {

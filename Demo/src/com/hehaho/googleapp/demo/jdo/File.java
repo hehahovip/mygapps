@@ -14,7 +14,7 @@ import javax.jdo.annotations.PrimaryKey;
 import com.google.appengine.api.datastore.Blob;
 
 /**
- * @author Kent.Wang
+ * @author Kevin.Wang
  *
  */
 @PersistenceCapable(identityType=IdentityType.APPLICATION)

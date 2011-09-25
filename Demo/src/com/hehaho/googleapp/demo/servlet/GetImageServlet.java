@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.hehaho.googleapp.demo.util.BytesUtils;
 
 /**
- * @author Kent.Wang
+ * @author Kevin.Wang
  *
  */
 public class GetImageServlet extends HttpServlet {

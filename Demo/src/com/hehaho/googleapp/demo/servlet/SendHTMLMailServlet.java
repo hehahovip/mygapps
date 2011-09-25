@@ -20,7 +20,7 @@ import com.hehaho.netshoppingmate.fetcher.impl.IcsonPriceFetcher;
 import com.hehaho.netshoppingmate.fetcher.impl.NeweggPriceFetcher;
 
 /**
- * @author Kent.Wang
+ * @author Kevin.Wang
  *
  */
 public class SendHTMLMailServlet extends HttpServlet{

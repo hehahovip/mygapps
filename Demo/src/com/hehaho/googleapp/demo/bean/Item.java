@@ -6,7 +6,7 @@ package com.hehaho.googleapp.demo.bean;
 import java.util.List;
 
 /**
- * @author Kent.Wang
+ * @author Kevin.Wang
  *
  */
 public class Item {

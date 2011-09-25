@@ -20,7 +20,7 @@ import javax.mail.internet.MimeMessage;
 
 
 /**
- * @author Kent.Wang
+ * @author Kevin.Wang
  *
  */
 public class MailServiceTest {
