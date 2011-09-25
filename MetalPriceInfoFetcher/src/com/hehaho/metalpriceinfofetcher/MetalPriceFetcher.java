@@ -3,20 +3,18 @@
  */
 package com.hehaho.metalpriceinfofetcher;
 
+import com.hehaho.metalpriceinfofetcher.bean.MetalPriceBean;
+
 /**
  * @author Kevin.Wang
  *
  */
 public interface MetalPriceFetcher {
 
-	public String getTotalAsset();
+	public MetalPriceBean getMetalInfo();
 	
-	public String getValueOnOunces();
+	public String getPageContent(String url);
 	
-	public String getValueOnTonners();
-	
-	public String getDate();
-	
-	public String getClosedPrice();
+	public void parseContent(String pageContent);
 	
 }
