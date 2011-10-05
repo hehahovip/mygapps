@@ -13,6 +13,8 @@ public interface MetalPriceFetcher {
 
 	public MetalPriceBean getMetalInfo();
 	
+	public String getPageContent();
+	
 	public String getPageContent(String url);
 	
 	public void parseContent(String pageContent);

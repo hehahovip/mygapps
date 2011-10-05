@@ -21,7 +21,7 @@ public class SiteHTMLWriter {
 	public static final String ISILVER_PAGE_URL = "http://us.ishares.com/product_info/fund/overview/SLV.htm";
 
 	public static final String SPDRGoldFileName = "SPDRGold";
-	public static final String SPDRGoldShares_PAGE_URL = "http://www.spdrgoldshares.com/#usa";
+	public static final String SPDRGoldShares_PAGE_URL = "http://www.spdrgoldshares.com/ajax/home/";
 	
 	
 	public static final String FileExtend = ".html";
@@ -82,7 +82,7 @@ public class SiteHTMLWriter {
 	public static void main(String[] args) {
 		SiteHTMLWriter writer = new SiteHTMLWriter();
 //		writer.writeSilverFile(ISILVER_PAGE_URL, "20110925");
-		writer.writeGoldFile(SPDRGoldShares_PAGE_URL, "20110925");
+		writer.writeGoldFile(SPDRGoldShares_PAGE_URL, "20111002");
 	}
 
 }

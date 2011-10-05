@@ -22,13 +22,13 @@ public class MetalPriceBean {
 	
 	private static SimpleDateFormat DateFormatter = new SimpleDateFormat();
 
-	private float closedPrice;
+	private double closedPrice;
 	
-	private float totalAsset;
+	private double totalAsset;
 	
-	private float valueOnOunces;
+	private double valueOnOunces;
 	
-	private float valueOnTonners;
+	private double valueOnTonners;
 	
 	private Date date;
 	
@@ -41,7 +41,7 @@ public class MetalPriceBean {
 		if(checkNull(closedPrice)){
 			closedPrice = closedPrice.replace(",", "");
 			try{
-				this.closedPrice = Float.parseFloat(closedPrice);
+				this.closedPrice = Double.parseDouble(closedPrice);
 			} catch (Exception e) {
 				Log.severe("Parsing closedPrice error! closedPrice = " + closedPrice);
 			}
@@ -57,7 +57,7 @@ public class MetalPriceBean {
 			String temp = totalNetAsset.replace("$","");
 			temp = temp.replace(",", "");
 			try{
-				this.totalAsset = Float.parseFloat(temp);
+				this.totalAsset = Double.parseDouble(temp);
 			} catch (Exception e) {
 				Log.severe("Parsing totalAsset error! totalAsset = " + temp);
 			}
@@ -72,7 +72,7 @@ public class MetalPriceBean {
 		if(checkNull(valueOnOunces)){
 			valueOnOunces = valueOnOunces.replace(",", "");
 			try{
-				this.valueOnOunces = Float.parseFloat(valueOnOunces);
+				this.valueOnOunces = Double.parseDouble(valueOnOunces);
 			} catch (Exception e) {
 				Log.severe("Parsing valueOnOunces error! valueOnOunces = " + valueOnOunces);
 			}
@@ -87,7 +87,7 @@ public class MetalPriceBean {
 		if(checkNull(valueOnTonners)){
 			valueOnTonners = valueOnTonners.replace(",", "");
 			try{
-				this.valueOnTonners = Float.parseFloat(valueOnTonners);
+				this.valueOnTonners = Double.parseDouble(valueOnTonners);
 			} catch (Exception e) {
 				Log.severe("Parsing valueOnTonners error! valueOnTonners = " + valueOnTonners);
 			}
@@ -112,63 +112,63 @@ public class MetalPriceBean {
 	}
 	
 	public String getDateString(){
-		DateFormatter.applyPattern("yyyy/MM/dd");
+		DateFormatter.applyPattern("yyyy-MM-dd");
 		return DateFormatter.format(date);
 	}
 	
 	/**
 	 * @return the closedPrice
 	 */
-	public float getClosedPrice() {
+	public double getClosedPrice() {
 		return closedPrice;
 	}
 
 	/**
 	 * @param closedPrice the closedPrice to set
 	 */
-	public void setClosedPrice(float closedPrice) {
+	public void setClosedPrice(double closedPrice) {
 		this.closedPrice = closedPrice;
 	}
 
 	/**
 	 * @return the totalAsset
 	 */
-	public float getTotalAsset() {
+	public double getTotalAsset() {
 		return totalAsset;
 	}
 
 	/**
 	 * @param totalAsset the totalAsset to set
 	 */
-	public void setTotalAsset(float totalAsset) {
+	public void setTotalAsset(double totalAsset) {
 		this.totalAsset = totalAsset;
 	}
 
 	/**
 	 * @return the valueOnOunces
 	 */
-	public float getValueOnOunces() {
+	public double getValueOnOunces() {
 		return valueOnOunces;
 	}
 
 	/**
 	 * @param valueOnOunces the valueOnOunces to set
 	 */
-	public void setValueOnOunces(float valueOnOunces) {
+	public void setValueOnOunces(double valueOnOunces) {
 		this.valueOnOunces = valueOnOunces;
 	}
 
 	/**
 	 * @return the valueOnTonners
 	 */
-	public float getValueOnTonners() {
+	public double getValueOnTonners() {
 		return valueOnTonners;
 	}
 
 	/**
 	 * @param valueOnTonners the valueOnTonners to set
 	 */
-	public void setValueOnTonners(float valueOnTonners) {
+	public void setValueOnTonners(double valueOnTonners) {
 		this.valueOnTonners = valueOnTonners;
 	}
 
