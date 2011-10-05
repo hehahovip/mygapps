@@ -32,6 +32,10 @@ public class MetalPriceBean {
 	
 	private Date date;
 	
+	private double diffOnOunces;
+	
+	private double diffOnTonners;
+	
 	static {
 		Formatter.setMaximumFractionDigits(3);
 	}
@@ -113,7 +117,10 @@ public class MetalPriceBean {
 	
 	public String getDateString(){
 		DateFormatter.applyPattern("yyyy-MM-dd");
-		return DateFormatter.format(date);
+		if(date != null){
+			return DateFormatter.format(date);
+		}
+		return null;
 	}
 	
 	/**
@@ -186,7 +193,42 @@ public class MetalPriceBean {
 		this.date = date;
 	}
 	
+	/**
+	 * @return the diffOnOunces
+	 */
+	public double getDiffOnOunces() {
+		return diffOnOunces;
+	}
 	
+	public String getDiffOnOuncesString(){
+		return Formatter.format(diffOnOunces);
+	}
+
+	/**
+	 * @param diffOnOunces the diffOnOunces to set
+	 */
+	public void setDiffOnOunces(double diffOnOunces) {
+		this.diffOnOunces = diffOnOunces;
+	}
+
+	/**
+	 * @return the diffOnTonners
+	 */
+	public double getDiffOnTonners() {
+		return diffOnTonners;
+	}
+	
+	public String getDiffOnTonnersString(){
+		return Formatter.format(diffOnTonners);
+	}
+
+	/**
+	 * @param diffOnTonners the diffOnTonners to set
+	 */
+	public void setDiffOnTonners(double diffOnTonners) {
+		this.diffOnTonners = diffOnTonners;
+	}
+
 	public boolean checkNull(String value){
 		return value!= null && !"".equals(value.trim());
 	}

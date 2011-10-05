@@ -9,6 +9,8 @@ import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
+import com.hehaho.metalpriceinfofetcher.bean.MetalPriceBean;
+
 /**
  * @author Kevin.Wang
  *
@@ -38,6 +40,30 @@ public class SilverBean {
 	@Persistent
 	private double diffOnTonners;
 
+	public SilverBean() {
+	}
+
+	public SilverBean(MetalPriceBean bean){
+		this.setClosedPrice(bean.getClosedPrice());
+		this.setDate(bean.getDateString());
+		this.setTotalAsset(bean.getTotalAsset());
+		this.setValueOnOunces(bean.getValueOnOunces());
+		this.setValueOnTonners(bean.getValueOnTonners());
+	}
+	
+	public MetalPriceBean getMetalPriceBean(){
+		MetalPriceBean bean = new MetalPriceBean();
+		bean.setClosedPrice(closedPrice);
+		bean.setDate(date);
+		bean.setTotalAsset(totalAsset);
+		bean.setValueOnOunces(valueOnOunces);
+		bean.setValueOnTonners(valueOnTonners);
+		bean.setDiffOnOunces(diffOnOunces);
+		bean.setDiffOnTonners(diffOnTonners);
+		
+		return bean;
+	}
+	
 	/**
 	 * @return the closedPrice
 	 */

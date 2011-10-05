@@ -8,9 +8,17 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<servlet-name>Goldpricechart</servlet-name>
 		<servlet-class>com.hehaho.googleapp.goldprice.GoldpricechartServlet</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>MailNotification</servlet-name>
+		<servlet-class>com.hehaho.googleapp.goldprice.servlet.GoldPriceNotificationMailServlet</servlet-class>
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>Goldpricechart</servlet-name>
 		<url-pattern>/goldpricechart</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>MailNotification</servlet-name>
+		<url-pattern>/mailnotification</url-pattern>
 	</servlet-mapping>
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>

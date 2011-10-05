@@ -147,7 +147,7 @@ public class SPDRGoldPriceFetcher extends AbstractMetalPriceFetcher {
 	 */
 	@Override
 	public String getPageContent() {
-		return super.getPageContent(SITE_URL);
+		return this.getPageContent(SITE_URL);
 	}
 
 }
