@@ -180,5 +180,26 @@ public class GoldSilverQueryTest extends LocalDataStoreTest {
 		
 		Assert.assertEquals("2011-10-10", bean.getDate());
 	}
+	
+	@Test
+	public void testDoubleSave(){
+		GoldBean one = new GoldBean();
+		one.setDate("2011-10-01");
+		one.setTotalAsset(1000);
+		
+		GoldBean two = new GoldBean();
+		two.setDate("2011-10-01");
+		two.setTotalAsset(2000);
+		
+		svc.saveGoldBean(one);
+		
+		svc.saveGoldBean(two);
+		
+		GoldBean result = svc.getLastestData(GoldBean.class);
+		
+		
+		Assert.assertEquals(two.getDate(), result.getDate());
+		Assert.assertEquals(two.getTotalAsset(), result.getTotalAsset());
+	}
 
 }

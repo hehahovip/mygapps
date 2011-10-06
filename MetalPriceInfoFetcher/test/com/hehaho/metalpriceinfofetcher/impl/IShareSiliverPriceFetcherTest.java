@@ -24,7 +24,7 @@ public class IShareSiliverPriceFetcherTest {
 		System.out.println("Total Assert: " + fetcher.getMetalInfo().getTotalNetAssetString());
 		System.out.println("Ounce: " + fetcher.getMetalInfo().getValueOnOuncesString());
 		System.out.println("Tonners: " + fetcher.getMetalInfo().getValueOnTonnersString());
-		System.out.println("Date: " + fetcher.getMetalInfo().getDateString());
+		System.out.println("Date: " + fetcher.getMetalInfo().getDate());
 		
 	}
 }

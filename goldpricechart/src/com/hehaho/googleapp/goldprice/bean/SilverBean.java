@@ -45,7 +45,7 @@ public class SilverBean {
 
 	public SilverBean(MetalPriceBean bean){
 		this.setClosedPrice(bean.getClosedPrice());
-		this.setDate(bean.getDateString());
+		this.setDate(bean.getDate());
 		this.setTotalAsset(bean.getTotalAsset());
 		this.setValueOnOunces(bean.getValueOnOunces());
 		this.setValueOnTonners(bean.getValueOnTonners());

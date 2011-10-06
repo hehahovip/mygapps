@@ -30,7 +30,7 @@ public class MetalPriceBean {
 	
 	private double valueOnTonners;
 	
-	private Date date;
+	private String date;
 	
 	private double diffOnOunces;
 	
@@ -102,25 +102,19 @@ public class MetalPriceBean {
 		return Formatter.format(valueOnTonners);
 	}
 	
-	public void setDate(String date){
+	public void setDateString(String date){
 		if(checkNull(date)){
 			String[] array = date.trim().split(" ");
 			
 			try {
 				DateFormatter.applyPattern("M/d/yyyy");
-				this.date = DateFormatter.parse(array[array.length -1]);
+				Date temp = DateFormatter.parse(array[array.length -1]);
+				DateFormatter.applyPattern("yyyy-MM-dd");
+				this.setDate(DateFormatter.format(temp));
 			} catch (ParseException e) {
 				Log.severe("Parsing date error! date = " + date);
 			}
 		}
-	}
-	
-	public String getDateString(){
-		DateFormatter.applyPattern("yyyy-MM-dd");
-		if(date != null){
-			return DateFormatter.format(date);
-		}
-		return null;
 	}
 	
 	/**
@@ -182,14 +176,14 @@ public class MetalPriceBean {
 	/**
 	 * @return the date
 	 */
-	public Date getDate() {
+	public String getDate() {
 		return date;
 	}
 
 	/**
 	 * @param date the date to set
 	 */
-	public void setDate(Date date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
 	

@@ -147,7 +147,7 @@ public class IShareSilverPriceFetcher extends AbstractMetalPriceFetcher {
 				String plainString = dateNode.toPlainTextString();
 
 				String dateString = plainString.substring(11);
-				metalBean.setDate(dateString.trim());
+				metalBean.setDateString(dateString.trim());
 			} else if (i == 3) {
 				// price
 				// TODO: we didn't need this info urgently, implement this

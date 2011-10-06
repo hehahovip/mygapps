@@ -3,7 +3,7 @@
 <cron>
     <url>/mailnotification</url>
     <description>Send mail for the change of Gold & Silver Trust</description>
-    <schedule>every day 23:55</schedule>
+    <schedule>every day 23:50</schedule>
   </cron>
   <!--<cron>
     <url>/htmlmail</url>

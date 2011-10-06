@@ -11,9 +11,9 @@ public class MetalPriceBeanTest {
 
 		MetalPriceBean bean = new MetalPriceBean();
 		
-		bean.setDate("9/23/2011");
+		bean.setDateString("9/23/2011");
 		
-		Assert.assertEquals("2011/09/23", bean.getDateString());
+		Assert.assertEquals("2011-09-23", bean.getDate());
 	
 	}
 
