@@ -66,6 +66,9 @@ public class GoldPriceNotificationMailServlet extends HttpServlet {
 		String htmlText = this.getHTMLMail(goldBean.getMetalPriceBean(), silverBean.getMetalPriceBean());
 		
 		HTMLMailService.sendMail(MY_MAIL_ADDRESS, toList, "Gold & Silver Trust", htmlText);
+		
+		arg1.setStatus(HttpServletResponse.SC_OK);
+		arg1.getWriter().println("Request finsihed");
 	}
 	
 	public String getHTMLMail(MetalPriceBean gold, MetalPriceBean silver){

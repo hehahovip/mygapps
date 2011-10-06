@@ -1,19 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cronentries>
-<cron>
-    <url>/mailnotification</url>
-    <description>Send mail for the change of Gold & Silver Trust</description>
-    <schedule>every day 23:50</schedule>
-  </cron>
-  <!--<cron>
-    <url>/htmlmail</url>
-    <description>Send price list to users 0:55</description>
-    <schedule>every day 0:55</schedule>
-  </cron>
-  <!--  cron>
-    <url>/weeklyreport</url>
-    <description>Mail out a weekly report</description>
-    <schedule>every monday 08:30</schedule>
-    <timezone>America/New_York</timezone>
-  </cron>-->
+	<cron>
+		<url>/mailnotification</url>
+		<description>Send mail for the change of Gold and Silver Trust</description>
+		<schedule>every day 23:50</schedule>
+	</cron>
 </cronentries>
