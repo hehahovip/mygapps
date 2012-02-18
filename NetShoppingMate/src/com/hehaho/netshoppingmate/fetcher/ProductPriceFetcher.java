@@ -23,4 +23,6 @@ public interface ProductPriceFetcher {
 	
 	public String getCharSet();
 	
+	public String getIDbyURL(String url);
+	
 }

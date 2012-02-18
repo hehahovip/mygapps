@@ -55,7 +55,7 @@ public abstract class AbstractProductPriceFetcher implements
 		}
 		
 		if(id != null && id.startsWith(Constants.HTTP_PREFIX)){
-			id = URLUtils.getIDbyURL(id);
+			id = getIDbyURL(id);
 		}
 		
 		String pageContent = getProductPageContentByID(id);
@@ -108,6 +108,23 @@ public abstract class AbstractProductPriceFetcher implements
 	public abstract void parseProductPrice(String pageContent);
 	
 	public abstract String getCharSet();
+	
+	/* (non-Javadoc)
+	 * @see com.hehaho.netshoppingmate.fetcher.ProductPriceFetcher#getIDbyURL(java.lang.String)
+	 */
+	@Override
+	public String getIDbyURL(String url) {
+		String result = null;
+		if(url == null || "".equalsIgnoreCase(url.trim())){
+			return null;
+		}
+		
+		if(url != null && url.startsWith(Constants.HTTP_PREFIX)){
+			result = URLUtils.getIDbyURL(url);
+		}
+		
+		return result;
+	}
 
 	/**
 	 * @return the imageData

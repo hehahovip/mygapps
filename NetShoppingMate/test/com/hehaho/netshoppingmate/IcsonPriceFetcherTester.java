@@ -13,9 +13,9 @@ public class IcsonPriceFetcherTester {
 
 	public static void main(String[] args){
 		IcsonPriceFetcher fetcher = new IcsonPriceFetcher();
-		byte[] data = fetcher.getPrice("76009");
+		byte[] data = fetcher.getPrice("http://item.51buy.com/item-143424.html");
 		PriceImageManager manager = new PriceImageManager();
-		manager.writeImageFile("./testdata/76009." + Constants.IMG_FILE_EXTENSIONS.PNG_IMG, data);
+		manager.writeImageFile("./testdata/143424." + Constants.IMG_FILE_EXTENSIONS.PNG_IMG, data);
 	}
 	
 }

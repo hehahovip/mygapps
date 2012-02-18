@@ -10,7 +10,9 @@ import org.htmlparser.Parser;
 import org.htmlparser.util.NodeIterator;
 import org.htmlparser.util.ParserException;
 
+import com.hehaho.netshoppingmate.Constants;
 import com.hehaho.netshoppingmate.fetcher.impl.htmltagvistors.icson.IcsonImageTagVistor;
+import com.hehaho.netshoppingmate.utils.URLUtils;
 
 /**
  * @author Kevin.Wang
@@ -18,9 +20,9 @@ import com.hehaho.netshoppingmate.fetcher.impl.htmltagvistors.icson.IcsonImageTa
  */
 public class IcsonPriceFetcher extends AbstractProductPriceFetcher {
 
-	public static String BASE_FETCH_URL = "http://www.icson.com/Products/";
+	public static String BASE_FETCH_URL = "http://item.51buy.com/item-";
 	
-	public static String ROOT_URL = "http://www.icson.com/";
+	public static String ROOT_URL = "http://www.51buy.com/";
 	
 	public static String PAGE_EXTEND_NAME = "html";
 	
@@ -28,7 +30,7 @@ public class IcsonPriceFetcher extends AbstractProductPriceFetcher {
 	
 	public static class IDs{
 		
-		public static String PRICE_IMG_CLASS_NAME = "price_icson";	
+		public static String PRICE_IMG_CLASS_NAME = "price_font";	
 		
 		public static String PRICE_IMG_SRC = "src";
 	}
@@ -81,9 +83,36 @@ public class IcsonPriceFetcher extends AbstractProductPriceFetcher {
 		
 	}
 	
+	/* (non-Javadoc)
+	 * @see com.hehaho.netshoppingmate.fetcher.impl.AbstractProductPriceFetcher#getIDbyURL(java.lang.String)
+	 */
+	@Override
+	public String getIDbyURL(String url) {
+		String result = null;
+		if(url == null || "".equalsIgnoreCase(url.trim())){
+			return null;
+		}
+		
+		if(url != null && url.startsWith(Constants.HTTP_PREFIX)){
+			String id = null;
+			if(url != null){
+				String[] parts = url.split("/");
+				
+				String last = parts[parts.length -1];
+				
+				String[] idString = last.split("\\.");
+				
+				String[] item = idString[0].split("-");
+				result = item[1];
+			}
+		}
+		
+		return result;
+	}
+
+
 	@Override
 	public String getCharSet() {
-		// TODO Auto-generated method stub
 		return CONTENT_CHARSET;
 	}
 }

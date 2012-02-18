@@ -5,6 +5,7 @@ package com.hehaho.googleapp.goldprice.servlet;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -17,6 +18,7 @@ import com.hehaho.googleapp.goldprice.bean.SilverBean;
 import com.hehaho.googleapp.goldprice.jdo.GoldSilverBeanDBService;
 import com.hehaho.googleapp.goldprice.jdo.GoldSilverBeanJDOServiceImpl;
 import com.hehaho.googleapp.goldprice.mailservice.HTMLMailService;
+import com.hehaho.googleapp.goldprice.utils.DateUtils;
 import com.hehaho.metalpriceinfofetcher.bean.MetalPriceBean;
 import com.hehaho.metalpriceinfofetcher.impl.IShareSilverPriceFetcher;
 import com.hehaho.metalpriceinfofetcher.impl.SPDRGoldPriceFetcher;
@@ -41,19 +43,24 @@ public class GoldPriceNotificationMailServlet extends HttpServlet {
 	@Override
 	protected void service(HttpServletRequest arg0, HttpServletResponse arg1) throws ServletException, IOException {
 //		super.service(arg0, arg1);
+		
+		Date now = new Date();
+		String nowDate = DateUtils.formatDate(now);
+		
 		IShareSilverPriceFetcher silverFetcher = new IShareSilverPriceFetcher();
 		String content = silverFetcher.getPageContent();
 		silverFetcher.parseContent(content);
 		MetalPriceBean silver = silverFetcher.getMetalInfo();
+		silver.setDate(nowDate);
 		
 		SPDRGoldPriceFetcher goldFetcher = new SPDRGoldPriceFetcher();
 		String goldContent = goldFetcher.getPageContent();
 		goldFetcher.parseContent(goldContent);
 		MetalPriceBean gold = goldFetcher.getMetalInfo();
+		gold.setDate(nowDate);
 		
 		SilverBean silverBean = new SilverBean(silver);
 		GoldBean goldBean = new GoldBean(gold);
-		goldBean.setDate(silverBean.getDate());
 		
 		GoldSilverBeanDBService service = new GoldSilverBeanJDOServiceImpl();
 		service.saveSilverBean(silverBean);

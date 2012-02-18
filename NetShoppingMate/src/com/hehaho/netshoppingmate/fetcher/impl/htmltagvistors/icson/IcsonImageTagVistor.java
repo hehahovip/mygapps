@@ -38,6 +38,8 @@ public class IcsonImageTagVistor extends NetShoppingMateTagFindingVisitor {
 	@Override
 	public void visitTag(Tag tag) {
 		super.visitTag(tag);
+//		System.out.println("--------" + tag.toHtml());
+		System.out.println("--------" + tag.getAttribute("class"));
 		if ("strong".equalsIgnoreCase(tag.getTagName())
 				&& IcsonPriceFetcher.IDs.PRICE_IMG_CLASS_NAME
 						.equalsIgnoreCase(tag.getAttribute("class"))) {
@@ -47,18 +49,21 @@ public class IcsonImageTagVistor extends NetShoppingMateTagFindingVisitor {
 
 			for (int i = 0; i < nodes.size(); i++) {
 
-				if (nodes.elementAt(i) instanceof ImageTag) {
-					ImageTag imageTag = (ImageTag) nodes.elementAt(i);
-
-					String url = IcsonPriceFetcher.BASE_FETCH_URL
-							+ imageTag
-									.getAttribute(IcsonPriceFetcher.IDs.PRICE_IMG_SRC);
-					priceURL = URLUtils.replaceSpace(url);
-					PriceImageManager imageManager = new PriceImageManager();
-					this.imageData = imageManager.getImage(id, priceURL,
-							Constants.IMG_FILE_EXTENSIONS.PNG_IMG);
-					this.setSuccess(true);
-				}
+//				if (nodes.elementAt(i) instanceof ImageTag) {
+//					ImageTag imageTag = (ImageTag) nodes.elementAt(i);
+//
+//					String url = IcsonPriceFetcher.BASE_FETCH_URL
+//							+ imageTag
+//									.getAttribute(IcsonPriceFetcher.IDs.PRICE_IMG_SRC);
+//					priceURL = URLUtils.replaceSpace(url);
+//					PriceImageManager imageManager = new PriceImageManager();
+//					this.imageData = imageManager.getImage(id, priceURL,
+//							Constants.IMG_FILE_EXTENSIONS.PNG_IMG);
+//					this.setSuccess(true);
+//				}
+				
+				this.priceURL = tag.getText();
+				this.setSuccess(true);
 			}
 		}
 	}
